@@ -1,16 +1,13 @@
 <%- include('../partials/blank_header.ejs') %>
 <form class="form-signin" action="/login/access" method="post">
-  <h1 class="h3 mb-3 font-weight-normal">Bienvenido</h1>
+  <h1 class="h3 mb-3 font-weight-normal">DESPEDIDO</h1>
   <input type="hidden" name="key" value="value">
   <span class="extraData"></span>
   <!--USER -->
   <label for="user" class="sr-only">User</label>
-  <input type="text" id="user" class="form-control" placeholder="Usuario" required="" autofocus="" name="user">
+  <input type="text" id="user" class="form-control" placeholder="Correo" required="" autofocus="" name="user">
   <!--CSRF -->
   <input type="hidden" name="<%= constants.csrf.key %>" value="<%= constants.csrf.secret %>">
-  <!--PASS -->
-  <label for="inputPassword" class="sr-only">Password</label>
-  <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required="" name="password">
   <!--MESSAGE-->
   <p class="<%= message_color %> message" style="margin-top:10px;" id="login-message"><%= message %></p>
   <!--BUTTON -->
@@ -22,7 +19,7 @@
     <a class="" href="/login/signac_in">
       Registrarse
     </a>
-    <a id="forgotpassword" class="pull-right" href="/login/reset">
+    <a id="forgotpassword" class="pull-right" href="/login/reset_password">
       Olvidó su Contraseña
     </a>
   </div>
